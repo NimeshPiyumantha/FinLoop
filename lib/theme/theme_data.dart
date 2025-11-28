@@ -4,7 +4,6 @@ import 'light_theme.dart';
 import 'dark_theme.dart';
 
 class LogicContextThemeManager {
-
   late ThemeData lightTheme = ThemeData(
     useMaterial3: true,
     colorScheme: lightColorScheme,
@@ -24,19 +23,20 @@ class LogicContextThemeManager {
       ),
     ),
 
-
     cardTheme: CardThemeData(
       color: lightColorScheme.surface,
       elevation: 0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
     ),
 
-
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: lightColorScheme.surface,
       hintStyle: fontTheme.bodyMedium?.copyWith(color: Colors.grey),
-      contentPadding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 20.0),
+      contentPadding: const EdgeInsets.symmetric(
+        vertical: 16.0,
+        horizontal: 20.0,
+      ),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12.0),
         borderSide: BorderSide.none,

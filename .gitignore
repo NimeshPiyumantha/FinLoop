@@ -55,3 +55,5 @@ google-services.json
 # iOS Firebase
 ios/Runner/GoogleService-Info.plist
 GoogleService-Info.plist
+.env
+lib/l10n/gen
