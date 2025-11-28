@@ -1,36 +1,40 @@
-### FinLoop 💸
+# FinLoop 💸
 
 ## The Architectonics of Tangible Value.
 
-FinLoop is a next-generation personal finance ecosystem designed to bridge the gap between functional utility and aesthetic comfort. It combines the tactile softness of Neumorphism (Soft UI) with the rigor of minimalism to reduce cognitive load, making financial management intuitive and engaging.
+FinLoop is a next-generation personal finance ecosystem designed to bridge the gap between
+functional utility and aesthetic comfort. It combines the tactile softness of Neumorphism (Soft UI)
+with the rigor of minimalism to reduce cognitive load, making financial management intuitive and
+engaging.
 
-Unlike traditional banking apps, FinLoop integrates Gamification mechanics—allowing users to "Grow their City" as they save and budget—transforming financial anxiety into mastery.
+Unlike traditional banking apps, FinLoop integrates Gamification mechanics—allowing users to "Grow
+their City" as they save and budget—transforming financial anxiety into mastery.
 
 ## 📱 Features
 
-# 🔐 Multi-Method Authentication
+### 🔐 Multi-Method Authentication
 
 * Secure login via Email/Password, Phone OTP, Google, Facebook, and Apple.
 * Biometric security integration.
 
-# 🎨 Adaptive Neumorphic Design
+### 🎨 Adaptive Neumorphic Design
 
 * Stunning "Soft UI" interface that provides tactile depth.
 * Fully responsive Light, Dark, and Gold themes.
 * Custom typography using Poppins & Inter for clarity and personality.
 
-# 🎮 Financial Gamification
+### 🎮 Financial Gamification
 
 * Grow Your City: Visualizing wealth building as a digital city that expands with savings.
 * Spin the Wheel: Daily engagement rewards.
 * Tiers: Progression system (Free, Bronze, Silver, Gold, Platinum).
 
-# 🌍 Localization
+### 🌍 Localization
 
 * Multi-language support (English & Spanish).
 * Automated code generation for type-safe strings.
 
-# 📊 Smart Analytics
+### 📊 Smart Analytics
 
 * Visual breakdown of spending habits.
 * "Spend Fearlessly" tracking logic.
@@ -50,11 +54,12 @@ Unlike traditional banking apps, FinLoop integrates Gamification mechanics—all
 
 Follow these instructions to get a copy of the project up and running on your local machine.
 
-# Prerequisites
+### Prerequisites
 
 * Flutter SDK (Version 3.10.x or higher)
 * Firebase CLI
-* Valid `google-services.json` (Android) and `GoogleService-Info.plist` (iOS) placed in their respective directories.
+* Valid `google-services.json` (Android) and `GoogleService-Info.plist` (iOS) placed in their
+  respective directories.
 
 ## Installation
 
@@ -72,7 +77,8 @@ flutter pub get
 ```
 
 3. Environment Setup:
-Create a `.env` file in the root directory and populate it with your specific API keys and configuration URLs.
+   Create a `.env` file in the root directory and populate it with your specific API keys and
+   configuration URLs.
 
 ```
 API_DOMAIN=api.yourdomain.com
@@ -80,7 +86,8 @@ API_DOMAIN=api.yourdomain.com
 ```
 
 4. Generate Localization Files:
-This project uses ARB files for localization. You must generate the Dart files before running the app.
+   This project uses ARB files for localization. You must generate the Dart files before running the
+   app.
 
 ```
 flutter gen-l10n
@@ -93,6 +100,7 @@ flutter run
 ```
 
 ## 📂 Project Structure
+
 ```
 lib/
 ├── generated/       # Asset constants and generated files
@@ -116,6 +124,7 @@ To add a new language:
 1. Create a new file in lib/l10n/ (e.g., app_fr.arb).
 2. Copy the keys from app_en.arb and provide translations.
 3. Run the generation command:
+
 ```
 flutter gen-l10n
 ```
