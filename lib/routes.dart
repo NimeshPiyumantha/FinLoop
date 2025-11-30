@@ -1,10 +1,12 @@
-import 'package:finloop/screen/onboard_screen/onboard_screen.dart';
-import 'package:finloop/screen/splash_screen/splash_screen.dart';
+import 'package:finloop/screens/authentication/forgot_password.dart';
+import 'package:finloop/screens/authentication/signin_screen.dart';
+import 'package:finloop/screens/authentication/signup_screen.dart';
+import 'package:finloop/screens/onboard_screen/onboard_screen.dart';
+import 'package:finloop/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    final args = settings.arguments;
 
     switch (settings.name) {
       case '/splash':
@@ -13,15 +15,17 @@ class RouteGenerator {
       case '/onboarding':
         return MaterialPageRoute(builder: (_) => const OnboardingScreen());
 
-      // case '/signin':
-      //   return MaterialPageRoute(
-      //     builder: (_) => SignInScreen(
-      //       backButtonTrigger: args is bool ? args : false,
-      //     ),
-      //   );
+      case '/signin':
+        return MaterialPageRoute(builder: (_) => SignInScreen());
+
+      case '/signup':
+        return MaterialPageRoute(builder: (_) => SignUpScreen());
+
+      case '/forgot_password':
+        return MaterialPageRoute(builder: (_) => const ForgotPasswordScreen());
 
       default:
-        return _errorRoute();
+        return MaterialPageRoute(builder: (_) => const SplashScreen());
     }
   }
 

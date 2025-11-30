@@ -1,6 +1,6 @@
 # FinLoop 💸
 
-## The Architectonics of Tangible Value.
+### The Architectonics of Tangible Value.
 
 FinLoop is a next-generation personal finance ecosystem designed to bridge the gap between
 functional utility and aesthetic comfort. It combines the tactile softness of Neumorphism (Soft UI)

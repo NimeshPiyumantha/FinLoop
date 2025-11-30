@@ -1,73 +1,157 @@
 import 'package:flutter/material.dart';
+import 'dark_theme.dart';
 import 'font_theme.dart';
 import 'light_theme.dart';
-import 'dark_theme.dart';
 
 class LogicContextThemeManager {
+
   late ThemeData lightTheme = ThemeData(
-    useMaterial3: true,
     colorScheme: lightColorScheme,
-    scaffoldBackgroundColor: lightColorScheme.surface,
-    textTheme: fontTheme.apply(
-      bodyColor: lightColorScheme.onSurface,
-      displayColor: lightColorScheme.onSurface,
-    ),
-
-    appBarTheme: AppBarTheme(
-      elevation: 0,
-      backgroundColor: Colors.transparent,
-      centerTitle: true,
-      iconTheme: IconThemeData(color: lightColorScheme.onSurface),
-      titleTextStyle: fontTheme.headlineSmall?.copyWith(
-        color: lightColorScheme.onSurface,
-      ),
-    ),
-
-    cardTheme: CardThemeData(
-      color: lightColorScheme.surface,
-      elevation: 0,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-    ),
-
+    fontFamily: 'Outfit',
+    textTheme: fontTheme,
+    useMaterial3: true,
+    cardTheme: const CardThemeData(color: Colors.white),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: lightColorScheme.surface,
-      hintStyle: fontTheme.bodyMedium?.copyWith(color: Colors.grey),
-      contentPadding: const EdgeInsets.symmetric(
-        vertical: 16.0,
-        horizontal: 20.0,
+      fillColor: const Color(0xFFF7F8F9),
+      labelStyle: const TextStyle(
+        color: Color(0xFF8391A1),
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Outfit',
+        fontSize: 16.0,
+      ),
+      hintStyle: const TextStyle(
+        color: Color(0xFF8391A1),
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Outfit',
+        fontSize: 16.0,
       ),
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12.0),
-        borderSide: BorderSide.none,
+        borderRadius: BorderRadius.circular(8.0),
+        borderSide: BorderSide(color: Colors.grey[200]!, width: 2.0),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8.0),
+        borderSide: BorderSide(color: Colors.grey[200]!, width: 2.0),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8.0),
+        borderSide: BorderSide(color: Colors.grey[200]!, width: 2.0),
+      ),
+      contentPadding: const EdgeInsets.symmetric(
+        vertical: 14.0,
+        horizontal: 12.0,
+      ),
+      errorStyle: const TextStyle(
+        color: Colors.red,
+        fontSize: 12.0,
+        fontWeight: FontWeight.w700,
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8.0),
+        borderSide: const BorderSide(color: Colors.red, width: 2.0),
+      ),
+    ),
+    appBarTheme: const AppBarTheme(
+      elevation: 0, // No shadow
+      centerTitle: true, // Center title text
+      iconTheme: IconThemeData(color: Colors.black),
+      titleTextStyle: TextStyle(
+        color: Colors.white,
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: WidgetStateProperty.all<Color>(Colors.black),
+        foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+          const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(25)),
+          ),
+        ),
+      ),
+    ),
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+        foregroundColor: WidgetStateProperty.all<Color>(Colors.deepOrange),
       ),
     ),
   );
 
-  // Dark Theme
   late ThemeData darkTheme = ThemeData(
-    useMaterial3: true,
     colorScheme: darkColorScheme,
-    scaffoldBackgroundColor: darkColorScheme.surface,
-    textTheme: fontTheme.apply(
-      bodyColor: darkColorScheme.onSurface,
-      displayColor: darkColorScheme.onSurface,
-    ),
-
-    appBarTheme: AppBarTheme(
-      elevation: 0,
-      backgroundColor: Colors.transparent,
-      centerTitle: true,
-      iconTheme: IconThemeData(color: darkColorScheme.onSurface),
-      titleTextStyle: fontTheme.headlineSmall?.copyWith(
-        color: darkColorScheme.onSurface,
+    fontFamily: 'Outfit',
+    textTheme: fontTheme,
+    useMaterial3: true,
+    cardTheme: const CardThemeData(color: Colors.white),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: const Color(0XFF484848),
+      labelStyle: const TextStyle(
+        color: Color(0xFFFFFFFF),
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Outfit',
+        fontSize: 16.0,
+      ),
+      hintStyle: const TextStyle(
+        color: Color(0xFFFFFFFF),
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Outfit',
+        fontSize: 16.0,
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8.0),
+        borderSide: const BorderSide(color: Color(0XFF484848), width: 2.0),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8.0),
+        borderSide: const BorderSide(color: Color(0XFF484848), width: 2.0),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8.0),
+        borderSide: const BorderSide(color: Color(0XFF484848), width: 2.0),
+      ),
+      contentPadding: const EdgeInsets.symmetric(
+        vertical: 14.0,
+        horizontal: 12.0,
+      ),
+      errorStyle: const TextStyle(
+        color: Colors.red,
+        fontSize: 12.0,
+        fontWeight: FontWeight.w700,
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8.0),
+        borderSide: const BorderSide(color: Colors.red, width: 2.0),
       ),
     ),
-
-    cardTheme: CardThemeData(
-      color: darkColorScheme.surface,
-      elevation: 0,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+    appBarTheme: const AppBarTheme(
+      elevation: 0, // No shadow
+      centerTitle: true, // Center title text
+      iconTheme: IconThemeData(color: Colors.black),
+      titleTextStyle: TextStyle(
+        color: Colors.white,
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: WidgetStateProperty.all<Color>(Colors.black),
+        foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+          const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(25)),
+          ),
+        ),
+      ),
+    ),
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+        foregroundColor: WidgetStateProperty.all<Color>(Colors.deepOrange),
+      ),
     ),
   );
 }
